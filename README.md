@@ -14,11 +14,12 @@ Paper Title: A Novel Double-Tail Generative Adversarial Network for Fast Photo A
 [![LICENSE](https://img.shields.io/badge/license-AnimeGANv3-AB82FF?logo=leagueoflegends&logoColor=AB82FF)](https://github.com/TachibanaYoshino/AnimeGANv3?tab=readme-ov-file#scroll-license)
 [![Github](https://img.shields.io/github/stars/TachibanaYoshino/AnimeGANv3?logo=githubsponsors&logoColor=#EA4AAA)](https://github.com/TachibanaYoshino/AnimeGANv3)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1Er23bL36pkr67Q9f1P28BuMP6yZKf-yz/view?usp=sharing)
-[![Visitor](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FVchitect%2FAnimeGANv3&count_bg=%23FFA500&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
+![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2FTachibanaYoshino%2FAnimeGANv3&label=visitor&icon=github&color=%23fd9843&message=&style=flat&tz=UTC)
 
 </div>       
 
 ## 📢 Updates    
+* `2025-08-22` Added a new AnimeGANv3 model for Face to Ghibli-c1 style. Its [model files](https://github.com/TachibanaYoshino/AnimeGANv3_Portrait_Inference/releases/download/1.0/AnimeGANv3_large_Ghibli_c1_e299.onnx) and [training data](https://www.patreon.com/posts/released-ghibli-137135263?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link) have been open source. The training data of **Ghibli-o1** style can be accessed [here](https://www.patreon.com/posts/released-ghibli-137019265?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link).     
 * `2025-02-16` Released the **TensorRT**-based model conversion and inference [repo](https://github.com/TachibanaYoshino/AnimeGANv3_Portrait_Inference/tree/tensorRT).
 * `2024-12-15` Released the **rknn**-based model conversion and inference [repo](https://github.com/TachibanaYoshino/AnimeGANv3_Portrait_Inference/tree/rknn). 
 * `2024-11-27` Disney and Trump styles updated to version 2.0.    
@@ -74,9 +75,9 @@ Paper Title: A Novel Double-Tail Generative Adversarial Network for Fast Photo A
 ## 🚀 Landscape Demos     
 ### :fire: Video to anime (Hayao Style)   
 <p>
-<a href="https://youtu.be/EosubeJmAnE"><img src="https://img.shields.io/static/v1?label=YouTube&message=video 1&color=red"/></a>
-<a href="https://youtu.be/5qLUflWb45E"><img src="https://img.shields.io/static/v1?label=YouTube&message=video 2&color=green"/></a>
-<a href="https://www.youtube.com/watch?v=iFjiaPlhVm4"><img src="https://img.shields.io/static/v1?label=YouTube&message=video 3&color=pink"/></a>
+<a href="https://youtu.be/EosubeJmAnE"><img src="https://img.shields.io/badge/YouTube-video1-red?logo=youtube&logoColor=red"/></a>
+<a href="https://youtu.be/5qLUflWb45E"><img src="https://img.shields.io/badge/YouTube-video2-green?logo=youtube&logoColor=red"/></a>
+<a href="https://www.youtube.com/watch?v=iFjiaPlhVm4"><img src="https://img.shields.io/badge/YouTube-video3-pink?logo=youtube&logoColor=red"/></a>
 </p>   
 
 ____     
@@ -137,6 +138,12 @@ ___
 |:-:|:-:| 
 |<video  src="https://github.com/user-attachments/assets/9cc111e9-8a1d-4c22-b0d0-0c430aca98d5" type="video/mp4"> </video>|<video  src="https://github.com/user-attachments/assets/53f927cd-bf2b-4699-a02a-8e635ff0403c" type="video/mp4"> </video>| 
 ___    
+
+### :art: Face to Ghibli-c1 style   
+
+![](https://github.com/user-attachments/assets/5f43be2b-9423-4d75-a14a-a0fba3a8fc74) 
+___   
+
 ### :art: Face to Trump style    
 
 ![](https://github.com/TachibanaYoshino/AnimeGANv3/blob/master/results/AnimeGANv3_Trump/Trump_output.jpg)     
