@@ -8,3 +8,9 @@ Temp
 *.csproj
 .vs
 obj
+Assets/ArtRes/test.mp4
+Assets/ArtRes/test.mp4.meta
+Assets/Plugins/Win/x86_64/cublas64_12.dll
+Assets/Plugins/Win/x86_64/cublasLt64_12.dll
+Assets/Plugins/Win/x86_64/cufft64_11.dll
+Assets/Plugins/Win/x86_64/onnxruntime_providers_cuda.dll

@@ -1,16 +1,18 @@
-using System;
-using System.Linq;
-using UnityEngine;
 using Microsoft.ML.OnnxRuntime;
 using Microsoft.ML.OnnxRuntime.Tensors;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class AnimeGANv3 : MonoBehaviour
 {
     private InferenceSession session;
 
-    [SerializeField] private string modelPath = Application.streamingAssetsPath + "/model/AnimeGANv3_Shinkai_37.onnx";
+    private string modelPath = Application.streamingAssetsPath + "/model/AnimeGANv3_Hayao_36.onnx";
 
     public Texture2D input;
     private Texture2D output;
@@ -20,12 +22,19 @@ public class AnimeGANv3 : MonoBehaviour
 
     void Start()
     {
+        var ortEnvInstance = OrtEnv.Instance();
+        string[] aps = ortEnvInstance.GetAvailableProviders();
+        foreach (var ap in aps)
+        {
+            Debug.Log(ap);
+        }
         // 创建会话选项，可以设置使用CPU或GPU
         var options = new SessionOptions();
         // 如果使用GPU，可以设置ExecutionProvider为CUDA（需要安装CUDA和cuDNN，并且ONNX Runtime支持）
-        // options.AppendExecutionProvider_CUDA(0);
+        //options.AppendExecutionProvider_DML(0);
         // 否则使用CPU
-        options.AppendExecutionProvider_CPU();
+        //options.AppendExecutionProvider_CPU();
+        options.AppendExecutionProvider_CUDA();
 
         try
         {
@@ -36,9 +45,22 @@ public class AnimeGANv3 : MonoBehaviour
             Debug.LogError("Failed to load model: " + e.Message);
             return;
         }
-        rimgInput.texture = input;
-        output = RunInference(input);
-        rimgOutput.texture = output;
+        rimgInput.texture = input; 
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            output = RunInference(input);
+            stopwatch.Stop();
+            long lastInferenceTime = stopwatch.ElapsedMilliseconds;
+            // 输出耗时信息
+            Debug.Log($"推理完成！总耗时: {lastInferenceTime}ms");
+            rimgOutput.texture = output;
+        }
     }
 
     public Texture2D RunInference(Texture2D inputTexture)

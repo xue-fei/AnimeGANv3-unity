@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AnimeGANv3.unity
     guid: 82810f97712ed2c4e95046d2d810eb99
+  - enabled: 0
+    path: Assets/Scenes/TestVideo.unity
+    guid: 4d8619a6653c41049a021936af57af3c
   m_configObjects: {}

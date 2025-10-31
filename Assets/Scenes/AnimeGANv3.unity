@@ -349,7 +349,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 300, y: 300}
+  m_CellSize: {x: 720, y: 1280}
   m_Spacing: {x: 74.15, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 2
@@ -451,8 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0811f4db4da344caafbc98192a7773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelPath: E:/MyProject/CartoonFace/Assets/StreamingAssets/model/AnimeGANv3_Shinkai_37.onnx
-  input: {fileID: 2800000, guid: cd1181481a863904a8b4ead2b7f489e0, type: 3}
+  input: {fileID: 2800000, guid: 9aa0c86f75e277e45a429aa2de709662, type: 3}
   rimgInput: {fileID: 261633781}
   rimgOutput: {fileID: 145174104}
 --- !u!1 &261633779
